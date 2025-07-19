@@ -1,193 +1,21 @@
-// Application data using real fashion products and images
+// Application data
 const appData = {
-  "products": [
-    {
-      "id": 1,
-      "name": "Designer Evening Dress",
-      "category": "Luxury",
-      "brand": "Elegance Co",
-      "price": 299.99,
-      "originalPrice": 399.99,
-      "rating": 4.8,
-      "reviews": 124,
-      "image": "https://cdn-img.perplexity.ai/image_cache/9ac35ebea8f9b10ce7f5dee9bf9b1bd2d7e4a6bbba0f5bf6d1e01dd52ab0db25",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/9ac35ebea8f9b10ce7f5dee9bf9b1bd2d7e4a6bbba0f5bf6d1e01dd52ab0db25",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/5552c6f847903a0bf8baba19c771ec76897c4015.jpg",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/6237ea762a882bfa23cd46309c5f9dd24e43d8d3.jpg",
-        "https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/d392c069-152a-4872-bc35-6553387bd962.png"
-      ],
-      "description": "Stunning designer evening dress perfect for formal occasions",
-      "sizes": ["XS", "S", "M", "L", "XL"],
-      "colors": ["Black", "Navy", "Burgundy"],
-      "inStock": true,
-      "isLuxury": true,
-      "season": "All Season"
-    },
-    {
-      "id": 2,
-      "name": "Cotton T-Shirt",
-      "category": "Daily",
-      "brand": "Comfort Plus",
-      "price": 29.99,
-      "originalPrice": 39.99,
-      "rating": 4.5,
-      "reviews": 89,
-      "image": "https://cdn-img.perplexity.ai/image_cache/8e1e2f6c7ef7a52c78a60b5adfb3d4e2b8e2c1b8e3f9c9d0f3a1c8e9b7d5e6f2",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/8e1e2f6c7ef7a52c78a60b5adfb3d4e2b8e2c1b8e3f9c9d0f3a1c8e9b7d5e6f2",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/d3b28fa1f0151dab0a6fccf887f0ef70a8c38109.jpg"
-      ],
-      "description": "Soft organic cotton t-shirt for everyday comfort",
-      "sizes": ["S", "M", "L", "XL", "XXL"],
-      "colors": ["White", "Black", "Peach", "Navy"],
-      "inStock": true,
-      "isDaily": true,
-      "season": "All Season"
-    },
-    {
-      "id": 3,
-      "name": "High-Waisted Denim Jeans",
-      "category": "Daily",
-      "brand": "Comfort Plus",
-      "price": 79.99,
-      "originalPrice": 99.99,
-      "rating": 4.6,
-      "reviews": 156,
-      "image": "https://cdn-img.perplexity.ai/image_cache/d8e9f2c3a4b5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/d8e9f2c3a4b5e6f7g8h9i0j1k2l3m4n5o6p7q8r9s0t1u2v3w4x5y6z7a8b9c0d1",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/218453db2b04e590fdbe73b8aa1bbc2b95f8dd22.jpg"
-      ],
-      "description": "Trendy high-waisted jeans with button-front closure",
-      "sizes": ["24", "26", "28", "30", "32", "34"],
-      "colors": ["Light Blue", "Dark Blue", "Black"],
-      "inStock": true,
-      "isDaily": true,
-      "season": "All Season"
-    },
-    {
-      "id": 4,
-      "name": "Winter Coat",
-      "category": "Seasonal",
-      "brand": "Seasonal Style",
-      "price": 189.99,
-      "originalPrice": 249.99,
-      "rating": 4.7,
-      "reviews": 203,
-      "image": "https://cdn-img.perplexity.ai/image_cache/e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/e1f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/1362d14cdbca8e0a5b143c81f1437a41b241ed5a.jpg"
-      ],
-      "description": "Warm padded winter coat with fur-lined hood",
-      "sizes": ["XS", "S", "M", "L", "XL"],
-      "colors": ["Red", "Black", "Navy", "Brown"],
-      "inStock": true,
-      "isSeasonal": true,
-      "season": "Winter"
-    },
-    {
-      "id": 5,
-      "name": "Black Trench Coat",
-      "category": "Seasonal",
-      "brand": "Seasonal Style", 
-      "price": 159.99,
-      "originalPrice": 199.99,
-      "rating": 4.4,
-      "reviews": 78,
-      "image": "https://cdn-img.perplexity.ai/image_cache/f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/f2g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/e71bb11fcef8c533e58fa49b0a498042f1f1621f.jpg"
-      ],
-      "description": "Classic black trench coat perfect for autumn and spring",
-      "sizes": ["XS", "S", "M", "L", "XL"],
-      "colors": ["Black", "Beige", "Navy"],
-      "inStock": true,
-      "isSeasonal": true,
-      "season": "Fall"
-    },
-    {
-      "id": 6,
-      "name": "Trending Sneakers",
-      "category": "Trending",
-      "brand": "Trend Wave",
-      "price": 129.99,
-      "originalPrice": 159.99,
-      "rating": 4.9,
-      "reviews": 312,
-      "image": "https://cdn-img.perplexity.ai/image_cache/g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/g3h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902285/pplx_project_search_images/c6751175e423c08174aa227e95f3646e4890d228.jpg"
-      ],
-      "description": "Trendy sneakers with unique design and comfort technology",
-      "sizes": ["6", "7", "8", "9", "10", "11", "12"],
-      "colors": ["White/Blue", "Black/Red", "Multi-Color"],
-      "inStock": true,
-      "isTrending": true,
-      "season": "All Season"
-    },
-    {
-      "id": 7,
-      "name": "Fashion Sneaker Set",
-      "category": "Trending",
-      "brand": "Trend Wave",
-      "price": 149.99,
-      "originalPrice": 189.99,
-      "rating": 4.6,
-      "reviews": 189,
-      "image": "https://cdn-img.perplexity.ai/image_cache/h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/h4i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/b4c9458dddcd1c50ae7faecf2933d9fca6a231bd.jpg"
-      ],
-      "description": "Stylish sneaker collection with metallic and leopard print options",
-      "sizes": ["6", "7", "8", "9", "10", "11"],
-      "colors": ["Gold", "Leopard Print", "White"],
-      "inStock": true,
-      "isTrending": true,
-      "season": "All Season"
-    },
-    {
-      "id": 8,
-      "name": "Luxury Evening Gown",
-      "category": "Luxury",
-      "brand": "Elegance Co",
-      "price": 499.99,
-      "originalPrice": 649.99,
-      "rating": 4.9,
-      "reviews": 67,
-      "image": "https://cdn-img.perplexity.ai/image_cache/i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6",
-      "images": [
-        "https://cdn-img.perplexity.ai/image_cache/i5j6k7l8m9n0o1p2q3r4s5t6u7v8w9x0y1z2a3b4c5d6e7f8g9h0i1j2k3l4m5n6",
-        "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/bcab80cf15f3012d37224f5099a21793fa5caaf9.jpg"
-      ],
-      "description": "Exquisite black evening gown with intricate lace details and dramatic train",
-      "sizes": ["XS", "S", "M", "L"],
-      "colors": ["Black", "Deep Purple", "Midnight Blue"],
-      "inStock": true,
-      "isLuxury": true,
-      "season": "All Season"
-    }
-  ],
   "brands": [
     {
       "id": 1,
       "name": "Elegance Co",
       "category": "Luxury",
-      "description": "Luxury fashion brand established in 1995",
-      "logo": "https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/d392c069-152a-4872-bc35-6553387bd962.png",
-      "established": "1995",
+      "description": "Premium fashion house specializing in sophisticated designs",
+      "logo": "/api/placeholder/120/60",
+      "established": "1985",
       "country": "Italy"
     },
     {
       "id": 2,
       "name": "Comfort Plus",
       "category": "Daily",
-      "description": "Everyday comfort wear since 2010",
-      "logo": "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/d3b28fa1f0151dab0a6fccf887f0ef70a8c38109.jpg",
+      "description": "Comfortable, high-quality everyday essentials",
+      "logo": "/api/placeholder/120/60",
       "established": "2010",
       "country": "USA"
     },
@@ -195,8 +23,8 @@ const appData = {
       "id": 3,
       "name": "Seasonal Style",
       "category": "Seasonal",
-      "description": "Weather-specific clothing experts",
-      "logo": "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/1362d14cdbca8e0a5b143c81f1437a41b241ed5a.jpg",
+      "description": "Weather-specific clothing and accessories",
+      "logo": "/api/placeholder/120/60",
       "established": "2015",
       "country": "Canada"
     },
@@ -204,10 +32,324 @@ const appData = {
       "id": 4,
       "name": "Trend Wave",
       "category": "Trending",
-      "description": "Latest fashion trends and viral pieces",
-      "logo": "https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/b4c9458dddcd1c50ae7faecf2933d9fca6a231bd.jpg",
+      "description": "Latest fashion trends and viral styles",
+      "logo": "/api/placeholder/120/60",
       "established": "2020",
       "country": "South Korea"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Luxury Silk Evening Gown",
+      "category": "Luxury",
+      "subcategory": "Dresses",
+      "brand": "Elegance Co",
+      "brandId": 1,
+      "price": 899.99,
+      "originalPrice": 1299.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600", 
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Exquisite hand-crafted silk evening gown with intricate beading. Perfect for galas and special occasions.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Midnight Blue", "Emerald Green", "Ruby Red", "Champagne"],
+      "material": "100% Mulberry Silk",
+      "rating": 4.9,
+      "reviews": 45,
+      "inStock": true,
+      "isLuxury": true,
+      "season": "All Season",
+      "brandStory": "Handcrafted by Italian artisans with over 35 years of heritage in luxury fashion."
+    },
+    {
+      "id": 2,
+      "name": "Organic Cotton Basic Tee",
+      "category": "Daily",
+      "subcategory": "T-Shirts", 
+      "brand": "Comfort Plus",
+      "brandId": 2,
+      "price": 24.99,
+      "originalPrice": 34.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Ultra-soft organic cotton t-shirt perfect for everyday comfort and casual styling.",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "colors": ["White", "Black", "Navy", "Gray", "Olive", "Dusty Pink"],
+      "material": "100% Organic Cotton",
+      "rating": 4.6,
+      "reviews": 892,
+      "inStock": true,
+      "isDaily": true,
+      "season": "All Season",
+      "sustainability": "GOTS Certified Organic Cotton"
+    },
+    {
+      "id": 3,
+      "name": "Winter Wool Coat",
+      "category": "Seasonal",
+      "subcategory": "Outerwear",
+      "brand": "Seasonal Style", 
+      "brandId": 3,
+      "price": 299.99,
+      "originalPrice": 399.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Warm and stylish wool coat designed for harsh winter weather. Features water-resistant coating.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Charcoal", "Camel", "Black", "Navy"],
+      "material": "80% Wool, 20% Polyester",
+      "rating": 4.7,
+      "reviews": 234,
+      "inStock": true,
+      "isSeasonal": true,
+      "season": "Winter",
+      "weatherRating": "Suitable for -10°C to 5°C"
+    },
+    {
+      "id": 4,
+      "name": "Viral TikTok Crop Top",
+      "category": "Trending",
+      "subcategory": "Tops",
+      "brand": "Trend Wave",
+      "brandId": 4,
+      "price": 39.99,
+      "originalPrice": 49.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Social media sensation crop top as seen on TikTok influencers. Perfect for concerts and festivals.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Hot Pink", "Electric Blue", "Neon Green", "Purple"],
+      "material": "95% Cotton, 5% Elastane",
+      "rating": 4.3,
+      "reviews": 1205,
+      "inStock": true,
+      "isTrending": true,
+      "season": "Spring/Summer",
+      "socialMedia": "Featured by 50+ influencers"
+    },
+    {
+      "id": 5,
+      "name": "Designer Leather Handbag",
+      "category": "Luxury",
+      "subcategory": "Accessories",
+      "brand": "Elegance Co",
+      "brandId": 1,
+      "price": 1299.99,
+      "originalPrice": 1699.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Handcrafted Italian leather handbag with gold-plated hardware. Limited edition design.",
+      "sizes": ["One Size"],
+      "colors": ["Black", "Cognac Brown", "Deep Red", "Cream"],
+      "material": "Genuine Italian Leather",
+      "rating": 4.8,
+      "reviews": 67,
+      "inStock": true,
+      "isLuxury": true,
+      "season": "All Season",
+      "authenticity": "Certificate of Authenticity included"
+    },
+    {
+      "id": 6,
+      "name": "Comfortable Yoga Leggings",
+      "category": "Daily",
+      "subcategory": "Activewear",
+      "brand": "Comfort Plus",
+      "brandId": 2,
+      "price": 49.99,
+      "originalPrice": 69.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "High-waisted leggings with moisture-wicking technology. Perfect for yoga, gym, or daily activities.",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "colors": ["Black", "Navy", "Charcoal", "Lavender", "Sage Green"],
+      "material": "88% Polyester, 12% Elastane",
+      "rating": 4.5,
+      "reviews": 456,
+      "inStock": true,
+      "isDaily": true,
+      "season": "All Season",
+      "features": "Moisture-wicking, 4-way stretch, squat-proof"
+    },
+    {
+      "id": 7,
+      "name": "Summer Linen Dress",
+      "category": "Seasonal",
+      "subcategory": "Dresses",
+      "brand": "Seasonal Style",
+      "brandId": 3,
+      "price": 89.99,
+      "originalPrice": 119.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Breathable linen dress perfect for hot summer days. Relaxed fit with tie waist detail.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["White", "Light Blue", "Coral", "Sage Green", "Natural Linen"],
+      "material": "100% European Linen",
+      "rating": 4.4,
+      "reviews": 189,
+      "inStock": true,
+      "isSeasonal": true,
+      "season": "Summer",
+      "care": "Machine washable, hang dry recommended"
+    },
+    {
+      "id": 8,
+      "name": "Instagram Oversized Blazer",
+      "category": "Trending",
+      "subcategory": "Blazers",
+      "brand": "Trend Wave",
+      "brandId": 4,
+      "price": 129.99,
+      "originalPrice": 179.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Oversized blazer trending on Instagram and Pinterest. Perfect for creating chic professional looks.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Black", "White", "Beige", "Pink", "Mint Green"],
+      "material": "70% Polyester, 25% Viscose, 5% Elastane",
+      "rating": 4.6,
+      "reviews": 723,
+      "inStock": true,
+      "isTrending": true,
+      "season": "Spring/Fall",
+      "styling": "As seen on 100+ fashion influencers"
+    },
+    {
+      "id": 9,
+      "name": "Luxury Cashmere Sweater", 
+      "category": "Luxury",
+      "subcategory": "Sweaters",
+      "brand": "Elegance Co",
+      "brandId": 1,
+      "price": 599.99,
+      "originalPrice": 799.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Premium cashmere sweater crafted from the finest Mongolian cashmere. Timeless elegance and supreme comfort.",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Cream", "Charcoal", "Camel", "Navy", "Burgundy"],
+      "material": "100% Mongolian Cashmere",
+      "rating": 4.9,
+      "reviews": 89,
+      "inStock": true,
+      "isLuxury": true,
+      "season": "Fall/Winter",
+      "origin": "Handknit in Scotland"
+    },
+    {
+      "id": 10,
+      "name": "Everyday Denim Jeans",
+      "category": "Daily", 
+      "subcategory": "Jeans",
+      "brand": "Comfort Plus",
+      "brandId": 2,
+      "price": 79.99,
+      "originalPrice": 99.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Classic straight-leg jeans with stretch comfort. Perfect fit for all body types and daily wear.",
+      "sizes": ["24", "26", "28", "30", "32", "34", "36"],
+      "colors": ["Dark Wash", "Medium Wash", "Light Wash", "Black"],
+      "material": "98% Cotton, 2% Elastane",
+      "rating": 4.5,
+      "reviews": 1340,
+      "inStock": true,
+      "isDaily": true,
+      "season": "All Season",
+      "fit": "Straight leg, mid-rise, stretch comfort"
+    },
+    {
+      "id": 11,
+      "name": "Trending Bucket Hat",
+      "category": "Trending",
+      "subcategory": "Accessories", 
+      "brand": "Trend Wave",
+      "brandId": 4,
+      "price": 29.99,
+      "originalPrice": 39.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Y2K-inspired bucket hat making a major comeback. Perfect for festival season and street style.",
+      "sizes": ["One Size"],
+      "colors": ["Black", "White", "Tie Dye", "Neon Pink", "Holographic"],
+      "material": "100% Cotton Canvas",
+      "rating": 4.2,
+      "reviews": 892,
+      "inStock": true,
+      "isTrending": true,
+      "season": "Spring/Summer",
+      "trend": "Featured in Vogue's trend report"
+    },
+    {
+      "id": 12,
+      "name": "Fall Pumpkin Spice Cardigan",
+      "category": "Seasonal",
+      "subcategory": "Cardigans",
+      "brand": "Seasonal Style",
+      "brandId": 3,
+      "price": 69.99,
+      "originalPrice": 89.99,
+      "images": [
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600", 
+        "/api/placeholder/400/600",
+        "/api/placeholder/400/600"
+      ],
+      "description": "Cozy chunky knit cardigan in warm fall colors. Perfect for layering during autumn season.",
+      "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "colors": ["Pumpkin Orange", "Rust", "Mustard", "Burgundy", "Forest Green"],
+      "material": "60% Acrylic, 30% Wool, 10% Alpaca",
+      "rating": 4.6,
+      "reviews": 334,
+      "inStock": true,
+      "isSeasonal": true,
+      "season": "Fall",
+      "vibe": "Perfect for pumpkin patch visits and cozy coffee dates"
     }
   ]
 };
@@ -540,7 +682,7 @@ function renderProducts() {
   productsGrid.innerHTML = filteredProducts.map(product => `
     <div class="product__card" onclick="openProductModal(${product.id})">
       <div class="product__image">
-        <img src="${product.image}" alt="${product.name}">
+        <img src="${product.images[0]}" alt="${product.name}">
         ${getBadgeHTML(product)}
         <button class="product__wishlist ${wishlistItems.includes(product.id) ? 'product__wishlist--active' : ''}" 
                 onclick="event.stopPropagation(); toggleWishlist(${product.id})">
@@ -614,7 +756,7 @@ function openProductModal(productId) {
   currentProduct = appData.products.find(p => p.id === productId);
   if (!currentProduct) return;
   
-  const brand = appData.brands.find(b => b.name === currentProduct.brand);
+  const brand = appData.brands.find(b => b.id === currentProduct.brandId);
   
   // Update modal content
   const mainImage = document.getElementById('mainImage');
@@ -687,6 +829,9 @@ function openProductModal(productId) {
         <span>Established: ${brand.established}</span>
         <span>Origin: ${brand.country}</span>
       </div>
+      ${currentProduct.brandStory ? `<p><strong>Heritage:</strong> ${currentProduct.brandStory}</p>` : ''}
+      ${currentProduct.authenticity ? `<p><strong>Authenticity:</strong> ${currentProduct.authenticity}</p>` : ''}
+      ${currentProduct.sustainability ? `<p><strong>Sustainability:</strong> ${currentProduct.sustainability}</p>` : ''}
     `;
   }
   
@@ -761,17 +906,7 @@ function getColorValue(colorName) {
     'Midnight Blue': '#191970',
     'Emerald Green': '#50c878',
     'Ruby Red': '#e0115f',
-    'Champagne': '#f7e7ce',
-    'Peach': '#ffcba4',
-    'Light Blue': '#add8e6',
-    'Dark Blue': '#00008b',
-    'Burgundy': '#800020',
-    'Deep Purple': '#663399',
-    'White/Blue': '#87ceeb',
-    'Black/Red': '#2f1b14',
-    'Multi-Color': '#ff6b6b',
-    'Gold': '#ffd700',
-    'Leopard Print': '#d2691e'
+    'Champagne': '#f7e7ce'
   };
   
   // Try to match color name
@@ -920,7 +1055,7 @@ function updateCartUI() {
       cartItems_element.innerHTML = cartItems.map(item => `
         <div class="cart-item">
           <div class="cart-item__image">
-            <img src="${item.image}" alt="${item.name}">
+            <img src="${item.images[0]}" alt="${item.name}">
           </div>
           <div class="cart-item__details">
             <h4>${item.name}</h4>

@@ -16,16 +16,16 @@
             </div>
             
             <div class="nav__search">
-                <input type="text" id="searchInput" class="form-control nav__search-input" placeholder="Search products, brands..." aria-label="Search">
-                <button class="btn btn--primary nav__search-btn" id="searchBtn" aria-label="Search button">Search</button>
+                <input type="text" id="searchInput" class="form-control nav__search-input" placeholder="Search products, brands...">
+                <button class="btn btn--primary nav__search-btn" id="searchBtn">Search</button>
             </div>
             
             <div class="nav__actions">
-                <button class="btn btn--outline nav__wishlist" id="wishlistBtn" aria-label="Wishlist">
+                <button class="btn btn--outline nav__wishlist" id="wishlistBtn">
                     <span class="nav__icon">♡</span>
                     <span class="nav__count" id="wishlistCount">0</span>
                 </button>
-                <button class="btn btn--primary nav__cart" id="cartBtn" aria-label="Shopping cart">
+                <button class="btn btn--primary nav__cart" id="cartBtn">
                     <span class="nav__icon">🛍️</span>
                     <span class="nav__count" id="cartCount">0</span>
                 </button>
@@ -44,7 +44,7 @@
                     <button class="btn btn--primary btn--lg hero__cta" data-category="Luxury">Shop Luxury</button>
                 </div>
                 <div class="hero__image">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/bcab80cf15f3012d37224f5099a21793fa5caaf9.jpg" alt="Luxury Collection" loading="lazy">
+                    <img src="/api/placeholder/600/400" alt="Luxury Collection">
                 </div>
             </div>
             <div class="hero__slide">
@@ -55,7 +55,7 @@
                     <button class="btn btn--primary btn--lg hero__cta" data-category="Daily">Shop Daily</button>
                 </div>
                 <div class="hero__image">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/d3b28fa1f0151dab0a6fccf887f0ef70a8c38109.jpg" alt="Daily Collection" loading="lazy">
+                    <img src="/api/placeholder/600/400" alt="Daily Collection">
                 </div>
             </div>
             <div class="hero__slide">
@@ -66,14 +66,14 @@
                     <button class="btn btn--primary btn--lg hero__cta" data-category="Trending">Shop Trending</button>
                 </div>
                 <div class="hero__image">
-                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/b4c9458dddcd1c50ae7faecf2933d9fca6a231bd.jpg" alt="Trending Collection" loading="lazy">
+                    <img src="/api/placeholder/600/400" alt="Trending Collection">
                 </div>
             </div>
         </div>
-        <div class="hero__nav" role="tablist">
-            <button class="hero__nav-btn hero__nav-btn--active" data-slide="0" aria-label="Slide 1"></button>
-            <button class="hero__nav-btn" data-slide="1" aria-label="Slide 2"></button>
-            <button class="hero__nav-btn" data-slide="2" aria-label="Slide 3"></button>
+        <div class="hero__nav">
+            <button class="hero__nav-btn hero__nav-btn--active" data-slide="0"></button>
+            <button class="hero__nav-btn" data-slide="1"></button>
+            <button class="hero__nav-btn" data-slide="2"></button>
         </div>
     </section>
 
@@ -82,11 +82,11 @@
         <div class="container">
             <h2 class="section__title">Featured Brands</h2>
             <div class="brands__carousel">
-                <div class="brands__track" id="brandsTrack" aria-live="polite">
+                <div class="brands__track" id="brandsTrack">
                     <!-- Brands will be populated by JavaScript -->
                 </div>
-                <button class="brands__nav brands__nav--prev" id="brandsPrev" aria-label="Previous brands">‹</button>
-                <button class="brands__nav brands__nav--next" id="brandsNext" aria-label="Next brands">›</button>
+                <button class="brands__nav brands__nav--prev" id="brandsPrev">‹</button>
+                <button class="brands__nav brands__nav--next" id="brandsNext">›</button>
             </div>
         </div>
     </section>
@@ -98,7 +98,7 @@
             <div class="collections__grid">
                 <div class="collection__card" data-category="Luxury">
                     <div class="collection__image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/5552c6f847903a0bf8baba19c771ec76897c4015.jpg" alt="Luxury Collection" loading="lazy">
+                        <img src="/api/placeholder/400/300" alt="Luxury Collection">
                     </div>
                     <div class="collection__content">
                         <h3 class="collection__title">Luxury Collection</h3>
@@ -109,7 +109,7 @@
                 
                 <div class="collection__card" data-category="Daily">
                     <div class="collection__image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/218453db2b04e590fdbe73b8aa1bbc2b95f8dd22.jpg" alt="Daily Essentials" loading="lazy">
+                        <img src="/api/placeholder/400/300" alt="Daily Essentials">
                     </div>
                     <div class="collection__content">
                         <h3 class="collection__title">Daily Essentials</h3>
@@ -120,7 +120,7 @@
                 
                 <div class="collection__card" data-category="Seasonal">
                     <div class="collection__image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/1362d14cdbca8e0a5b143c81f1437a41b241ed5a.jpg" alt="Seasonal Specials" loading="lazy">
+                        <img src="/api/placeholder/400/300" alt="Seasonal Specials">
                     </div>
                     <div class="collection__content">
                         <h3 class="collection__title">Seasonal Specials</h3>
@@ -131,7 +131,7 @@
                 
                 <div class="collection__card" data-category="Trending">
                     <div class="collection__image">
-                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902285/pplx_project_search_images/c6751175e423c08174aa227e95f3646e4890d228.jpg" alt="Trending Now" loading="lazy">
+                        <img src="/api/placeholder/400/300" alt="Trending Now">
                     </div>
                     <div class="collection__content">
                         <h3 class="collection__title">Trending Now</h3>
@@ -150,7 +150,7 @@
                 <h2 class="section__title">All Products</h2>
                 <div class="products__controls">
                     <div class="filters">
-                        <select class="form-control filter" id="categoryFilter" aria-label="Category filter">
+                        <select class="form-control filter" id="categoryFilter">
                             <option value="">All Categories</option>
                             <option value="Luxury">Luxury</option>
                             <option value="Daily">Daily</option>
@@ -158,11 +158,11 @@
                             <option value="Trending">Trending</option>
                         </select>
                         
-                        <select class="form-control filter" id="brandFilter" aria-label="Brand filter">
+                        <select class="form-control filter" id="brandFilter">
                             <option value="">All Brands</option>
                         </select>
                         
-                        <select class="form-control filter" id="priceFilter" aria-label="Price filter">
+                        <select class="form-control filter" id="priceFilter">
                             <option value="">All Prices</option>
                             <option value="0-50">$0 - $50</option>
                             <option value="50-100">$50 - $100</option>
@@ -171,7 +171,7 @@
                             <option value="600+">$600+</option>
                         </select>
                         
-                        <select class="form-control filter" id="seasonFilter" aria-label="Season filter">
+                        <select class="form-control filter" id="seasonFilter">
                             <option value="">All Seasons</option>
                             <option value="Spring">Spring</option>
                             <option value="Summer">Summer</option>
@@ -182,7 +182,7 @@
                     </div>
                     
                     <div class="sort">
-                        <select class="form-control" id="sortFilter" aria-label="Sort products">
+                        <select class="form-control" id="sortFilter">
                             <option value="featured">Featured</option>
                             <option value="price-low">Price: Low to High</option>
                             <option value="price-high">Price: High to Low</option>
@@ -200,16 +200,16 @@
     </section>
 
     <!-- Product Modal -->
-    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productTitle">
+    <div class="modal" id="productModal">
         <div class="modal__overlay" id="modalOverlay"></div>
         <div class="modal__content">
-            <button class="modal__close" id="modalClose" aria-label="Close">&times;</button>
+            <button class="modal__close" id="modalClose">&times;</button>
             <div class="product-detail">
                 <div class="product-detail__images">
                     <div class="product-detail__image-main">
-                        <img id="mainImage" src="" alt="Product image">
+                        <img id="mainImage" src="" alt="">
                     </div>
-                    <div class="product-detail__image-thumbnails" id="imageThumbnails" aria-label="Image thumbnails">
+                    <div class="product-detail__image-thumbnails" id="imageThumbnails">
                         <!-- Thumbnails populated by JavaScript -->
                     </div>
                 </div>
@@ -228,7 +228,7 @@
                     
                     <div class="product-detail__options">
                         <div class="option">
-                            <label class="form-label" for="sizeSelect">Size</label>
+                            <label class="form-label">Size</label>
                             <select class="form-control" id="sizeSelect">
                                 <!-- Sizes populated by JavaScript -->
                             </select>
@@ -261,10 +261,10 @@
     </div>
 
     <!-- Cart Sidebar -->
-    <div class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart sidebar">
+    <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-sidebar__header">
             <h3>Shopping Cart</h3>
-            <button class="cart-sidebar__close" id="cartClose" aria-label="Close cart">&times;</button>
+            <button class="cart-sidebar__close" id="cartClose">&times;</button>
         </div>
         <div class="cart-sidebar__items" id="cartItems">
             <!-- Cart items populated by JavaScript -->
@@ -289,10 +289,10 @@
                 </div>
                 <div class="footer__section">
                     <h4>Collections</h4>
-                    <a href="#" data-collection="Luxury">Luxury</a>
-                    <a href="#" data-collection="Daily">Daily Essentials</a>
-                    <a href="#" data-collection="Seasonal">Seasonal</a>
-                    <a href="#" data-collection="Trending">Trending</a>
+                    <a href="#">Luxury</a>
+                    <a href="#">Daily Essentials</a>
+                    <a href="#">Seasonal</a>
+                    <a href="#">Trending</a>
                 </div>
                 <div class="footer__section">
                     <h4>Support</h4>
@@ -303,10 +303,10 @@
                 </div>
                 <div class="footer__section">
                     <h4>Follow Us</h4>
-                    <a href="https://instagram.com" target="_blank">Instagram</a>
-                    <a href="https://tiktok.com" target="_blank">TikTok</a>
-                    <a href="https://pinterest.com" target="_blank">Pinterest</a>
-                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                    <a href="#">Pinterest</a>
+                    <a href="#">Facebook</a>
                 </div>
             </div>
             <div class="footer__bottom">
