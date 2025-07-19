@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Fashion - Premium Clothing & Brands</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <h1 class="nav__logo">LUXE</h1>
+                <span class="nav__tagline">Premium Fashion</span>
+            </div>
+            
+            <div class="nav__search">
+                <input type="text" id="searchInput" class="form-control nav__search-input" placeholder="Search products, brands..." aria-label="Search">
+                <button class="btn btn--primary nav__search-btn" id="searchBtn" aria-label="Search button">Search</button>
+            </div>
+            
+            <div class="nav__actions">
+                <button class="btn btn--outline nav__wishlist" id="wishlistBtn" aria-label="Wishlist">
+                    <span class="nav__icon">♡</span>
+                    <span class="nav__count" id="wishlistCount">0</span>
+                </button>
+                <button class="btn btn--primary nav__cart" id="cartBtn" aria-label="Shopping cart">
+                    <span class="nav__icon">🛍️</span>
+                    <span class="nav__count" id="cartCount">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__slider">
+            <div class="hero__slide hero__slide--active">
+                <div class="hero__content">
+                    <span class="hero__category">Luxury Collection</span>
+                    <h2 class="hero__title">Exquisite Designer Pieces</h2>
+                    <p class="hero__description">Discover handcrafted luxury fashion from the world's finest designers</p>
+                    <button class="btn btn--primary btn--lg hero__cta" data-category="Luxury">Shop Luxury</button>
+                </div>
+                <div class="hero__image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/bcab80cf15f3012d37224f5099a21793fa5caaf9.jpg" alt="Luxury Collection" loading="lazy">
+                </div>
+            </div>
+            <div class="hero__slide">
+                <div class="hero__content">
+                    <span class="hero__category">Daily Essentials</span>
+                    <h2 class="hero__title">Comfort Meets Style</h2>
+                    <p class="hero__description">Premium everyday wear for the modern lifestyle</p>
+                    <button class="btn btn--primary btn--lg hero__cta" data-category="Daily">Shop Daily</button>
+                </div>
+                <div class="hero__image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/d3b28fa1f0151dab0a6fccf887f0ef70a8c38109.jpg" alt="Daily Collection" loading="lazy">
+                </div>
+            </div>
+            <div class="hero__slide">
+                <div class="hero__content">
+                    <span class="hero__category">Trending Now</span>
+                    <h2 class="hero__title">Latest Fashion Trends</h2>
+                    <p class="hero__description">Social media sensations and viral fashion pieces</p>
+                    <button class="btn btn--primary btn--lg hero__cta" data-category="Trending">Shop Trending</button>
+                </div>
+                <div class="hero__image">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/b4c9458dddcd1c50ae7faecf2933d9fca6a231bd.jpg" alt="Trending Collection" loading="lazy">
+                </div>
+            </div>
+        </div>
+        <div class="hero__nav" role="tablist">
+            <button class="hero__nav-btn hero__nav-btn--active" data-slide="0" aria-label="Slide 1"></button>
+            <button class="hero__nav-btn" data-slide="1" aria-label="Slide 2"></button>
+            <button class="hero__nav-btn" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+    </section>
+
+    <!-- Brand Carousel -->
+    <section class="brands">
+        <div class="container">
+            <h2 class="section__title">Featured Brands</h2>
+            <div class="brands__carousel">
+                <div class="brands__track" id="brandsTrack" aria-live="polite">
+                    <!-- Brands will be populated by JavaScript -->
+                </div>
+                <button class="brands__nav brands__nav--prev" id="brandsPrev" aria-label="Previous brands">‹</button>
+                <button class="brands__nav brands__nav--next" id="brandsNext" aria-label="Next brands">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Categories -->
+    <section class="collections">
+        <div class="container">
+            <h2 class="section__title">Shop by Collection</h2>
+            <div class="collections__grid">
+                <div class="collection__card" data-category="Luxury">
+                    <div class="collection__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/5552c6f847903a0bf8baba19c771ec76897c4015.jpg" alt="Luxury Collection" loading="lazy">
+                    </div>
+                    <div class="collection__content">
+                        <h3 class="collection__title">Luxury Collection</h3>
+                        <p class="collection__description">Premium designer pieces for special occasions</p>
+                        <button class="btn btn--primary collection__btn">Explore Luxury</button>
+                    </div>
+                </div>
+                
+                <div class="collection__card" data-category="Daily">
+                    <div class="collection__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/218453db2b04e590fdbe73b8aa1bbc2b95f8dd22.jpg" alt="Daily Essentials" loading="lazy">
+                    </div>
+                    <div class="collection__content">
+                        <h3 class="collection__title">Daily Essentials</h3>
+                        <p class="collection__description">Comfortable, high-quality pieces for everyday wear</p>
+                        <button class="btn btn--primary collection__btn">Shop Daily</button>
+                    </div>
+                </div>
+                
+                <div class="collection__card" data-category="Seasonal">
+                    <div class="collection__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902284/pplx_project_search_images/1362d14cdbca8e0a5b143c81f1437a41b241ed5a.jpg" alt="Seasonal Specials" loading="lazy">
+                    </div>
+                    <div class="collection__content">
+                        <h3 class="collection__title">Seasonal Specials</h3>
+                        <p class="collection__description">Weather-appropriate clothing for every season</p>
+                        <button class="btn btn--primary collection__btn">Browse Seasonal</button>
+                    </div>
+                </div>
+                
+                <div class="collection__card" data-category="Trending">
+                    <div class="collection__image">
+                        <img src="https://pplx-res.cloudinary.com/image/upload/v1752902285/pplx_project_search_images/c6751175e423c08174aa227e95f3646e4890d228.jpg" alt="Trending Now" loading="lazy">
+                    </div>
+                    <div class="collection__content">
+                        <h3 class="collection__title">Trending Now</h3>
+                        <p class="collection__description">Latest fashion trends and social media favorites</p>
+                        <button class="btn btn--primary collection__btn">See Trends</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Products -->
+    <section class="products">
+        <div class="container">
+            <div class="products__header">
+                <h2 class="section__title">All Products</h2>
+                <div class="products__controls">
+                    <div class="filters">
+                        <select class="form-control filter" id="categoryFilter" aria-label="Category filter">
+                            <option value="">All Categories</option>
+                            <option value="Luxury">Luxury</option>
+                            <option value="Daily">Daily</option>
+                            <option value="Seasonal">Seasonal</option>
+                            <option value="Trending">Trending</option>
+                        </select>
+                        
+                        <select class="form-control filter" id="brandFilter" aria-label="Brand filter">
+                            <option value="">All Brands</option>
+                        </select>
+                        
+                        <select class="form-control filter" id="priceFilter" aria-label="Price filter">
+                            <option value="">All Prices</option>
+                            <option value="0-50">$0 - $50</option>
+                            <option value="50-100">$50 - $100</option>
+                            <option value="100-300">$100 - $300</option>
+                            <option value="300-600">$300 - $600</option>
+                            <option value="600+">$600+</option>
+                        </select>
+                        
+                        <select class="form-control filter" id="seasonFilter" aria-label="Season filter">
+                            <option value="">All Seasons</option>
+                            <option value="Spring">Spring</option>
+                            <option value="Summer">Summer</option>
+                            <option value="Fall">Fall</option>
+                            <option value="Winter">Winter</option>
+                            <option value="All Season">All Season</option>
+                        </select>
+                    </div>
+                    
+                    <div class="sort">
+                        <select class="form-control" id="sortFilter" aria-label="Sort products">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="products__grid" id="productsGrid">
+                <!-- Products will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="productTitle">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modalClose" aria-label="Close">&times;</button>
+            <div class="product-detail">
+                <div class="product-detail__images">
+                    <div class="product-detail__image-main">
+                        <img id="mainImage" src="" alt="Product image">
+                    </div>
+                    <div class="product-detail__image-thumbnails" id="imageThumbnails" aria-label="Image thumbnails">
+                        <!-- Thumbnails populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="product-detail__info">
+                    <div class="product-detail__brand" id="productBrand"></div>
+                    <h2 class="product-detail__title" id="productTitle"></h2>
+                    <div class="product-detail__rating">
+                        <div class="rating" id="productRating"></div>
+                        <span class="reviews" id="productReviews"></span>
+                    </div>
+                    <div class="product-detail__price">
+                        <span class="price" id="productPrice"></span>
+                        <span class="price--original" id="productOriginalPrice"></span>
+                    </div>
+                    <p class="product-detail__description" id="productDescription"></p>
+                    
+                    <div class="product-detail__options">
+                        <div class="option">
+                            <label class="form-label" for="sizeSelect">Size</label>
+                            <select class="form-control" id="sizeSelect">
+                                <!-- Sizes populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div class="option">
+                            <label class="form-label">Color</label>
+                            <div class="color-options" id="colorOptions">
+                                <!-- Colors populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-detail__actions">
+                        <button class="btn btn--secondary btn--full-width wishlist-btn" id="wishlistProductBtn">
+                            Add to Wishlist ♡
+                        </button>
+                        <button class="btn btn--primary btn--full-width btn--lg" id="addToCartBtn">
+                            Add to Cart - <span id="cartPrice"></span>
+                        </button>
+                    </div>
+                    
+                    <div class="product-detail__extra">
+                        <div class="brand-info" id="brandInfo">
+                            <!-- Brand info populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar" aria-label="Shopping cart sidebar">
+        <div class="cart-sidebar__header">
+            <h3>Shopping Cart</h3>
+            <button class="cart-sidebar__close" id="cartClose" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-sidebar__items" id="cartItems">
+            <!-- Cart items populated by JavaScript -->
+        </div>
+        <div class="cart-sidebar__footer">
+            <div class="cart-sidebar__total">
+                <strong>Total: $<span id="cartTotal">0.00</span></strong>
+            </div>
+            <button class="btn btn--primary btn--full-width btn--lg" id="checkoutBtn">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h4>LUXE</h4>
+                    <p>Premium fashion and luxury brands for the discerning customer.</p>
+                </div>
+                <div class="footer__section">
+                    <h4>Collections</h4>
+                    <a href="#" data-collection="Luxury">Luxury</a>
+                    <a href="#" data-collection="Daily">Daily Essentials</a>
+                    <a href="#" data-collection="Seasonal">Seasonal</a>
+                    <a href="#" data-collection="Trending">Trending</a>
+                </div>
+                <div class="footer__section">
+                    <h4>Support</h4>
+                    <a href="#">Size Guide</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                </div>
+                <div class="footer__section">
+                    <h4>Follow Us</h4>
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://tiktok.com" target="_blank">TikTok</a>
+                    <a href="https://pinterest.com" target="_blank">Pinterest</a>
+                    <a href="https://facebook.com" target="_blank">Facebook</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 LUXE Fashion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
